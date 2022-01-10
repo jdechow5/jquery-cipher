@@ -37,5 +37,15 @@ console.log(nOne);
 console.log(nTwo);
 console.log(reverse(nTwo));
 
+$(document).ready(function() {
+  $("#one").click(function() {
+    alert(userSentence);
+	});
+
+	$("#two").click(function() {
+		alert(reverse(nTwo));
+	});
+});
+
 //console.log(reverse('William & Justin'));
 //console.log(naiveReverse(firstLastUpper));
