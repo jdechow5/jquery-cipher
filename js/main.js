@@ -1,7 +1,5 @@
 const userSentence = prompt("What's the password?");
 
-console.log(userSentence);
-
 function firstAndLast(u) {
 	let last = u.length - 1;
 	return(u.charAt(0).toUpperCase()
@@ -30,22 +28,14 @@ function naiveCipherTwo(u, coSent) {
 	return(divTwo + coSent);
 }
 
-let nOne = naiveCipherOne(userSentence);
-let nTwo = naiveCipherTwo(userSentence, nOne);
-
-console.log(nOne);
-console.log(nTwo);
-console.log(reverse(nTwo));
+let nTwo = naiveCipherTwo(userSentence, naiveCipherOne(userSentence));
 
 $(document).ready(function() {
   $("#one").click(function() {
-    alert(userSentence);
+		$('#user-input').text(userSentence);
 	});
 
 	$("#two").click(function() {
-		alert(reverse(nTwo));
+		$('#user-input').text(reverse(nTwo));
 	});
 });
-
-//console.log(reverse('William & Justin'));
-//console.log(naiveReverse(firstLastUpper));
